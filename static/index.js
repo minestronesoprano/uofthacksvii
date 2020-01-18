@@ -22,8 +22,7 @@ function weatherCallback(weatherData) {
     var country = weatherData.sys.country;
     var description = weatherData.weather[0].main;
     var temperature = Math.floor(weatherData.main.temp - 273.15);
-    $("#icon").html(temperature);
-    //showIcon(description);
+    showIcon(description);
   }
 
 function showIcon(description) {
