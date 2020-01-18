@@ -1,5 +1,7 @@
 
 <!doctype html>
+
+
 <html lang="en-US">
 <head>
   <meta charset="utf-8">
@@ -8,11 +10,11 @@
 </head>
 <body onload="getLocation()">
   <div id="body">
+    <script src="https://ajax.google.com/ajax/libs/jquery/3.2.1/jquery.min.js"></src>
     <script src="/static/script.js"></script>
     <div class="left-bar" align="center">
       <div id="weather-pic">
-        <span id = "icon"></span>
-        <img src="https://i.ibb.co/JtfNgVj/sun.png">
+        <span id = "icon"><img src="https://i.ibb.co/JtfNgVj/sun.png" alt=""></span>
       </div>
       <div id="weather-text">
         <ul>
@@ -23,8 +25,7 @@
     </div>
     <div class="right-bar" align="center">
       <div id="weather-tmr">
-        <span id = "icon2"></span>
-        <img src="https://i.ibb.co/JtfNgVj/sun.png">
+        <span id = "icon2"><img src="https://i.ibb.co/JtfNgVj/sun.png" alt=""></span>
       </div>
     </div>
     <div class="main" align="center">
@@ -37,14 +38,6 @@
         </div>
       </div>
     </div>
-    </div>
-  </body>
-  </html>
-
-
-  <!-- A background color other than white on an element.
-  A border.
-  A font color other than black.
-  A sans-serif font.
-  Rounded borders on an element (note: the element must have either a border or a background color to see the rounded border).
--->
+  </div>
+</body>
+</html>
