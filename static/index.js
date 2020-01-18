@@ -21,14 +21,15 @@ function weatherCallback(weatherData) {
     var cityName = weatherData.name;
     var country = weatherData.sys.country;
     var description = weatherData.weather[0].main;
+    var details = weatherData.weather[0].description;
     var temperature = Math.floor(weatherData.main.temp - 273.15);
-    $("#temperature").html("<h1>" + temperature + "</h1>");
-    setMessage(temperature, description);
+    setMessage(temperature, description, details);
     showIcon(description);
   }
 
-function setMessage(temperature, description) {
+function setMessage(temperature, description, details) {
   $("#temperature").html("<h1>" + temperature + "</h1>");
+  $("#weather-text").html("<h2>" + details + "</h2>");
   var cold = false;
   var mild = false;
   var hot = false;
