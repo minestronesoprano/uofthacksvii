@@ -6,34 +6,37 @@
   <title>Title</title>
   <link rel="stylesheet" href="../static/index.css">
 </head>
-<body>
+<body onload="getLocation()">
   <div id="body">
-    <script src="/static/js/script.js"></script>
-    <h1>Title</h1>
-    <a href="about.html">About</a>
-    <div id="about_me">
-      <h2>All About Me</h2>
-      <div id = "frog">
-        <iframe height="315" width= "500" src="https://www.youtube.com/embed/L8bR07JJoMc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+    <script src="/static/script.js"></script>
+    <div class="left-bar" align="center">
+      <div id="weather-pic">
+        <span id = "icon"></span>
+        <img src="https://i.ibb.co/JtfNgVj/sun.png">
       </div>
-      <p>I live in Central New Jersey.  I like singing and meeting new people.  I'm starting college in
-        the fall as a first year at the University of Toronto.</p>
+      <div id="weather-text">
+        <ul>
+          <li><p>weather</p></li>
+          <li>some other weather</li>
+        </ul>
       </div>
-      <div id = "youtube">
-        <h2>My Favorite Youtube Videos</h2>
-        <ol>
-          <li>
-            <a href="https://www.youtube.com/watch?v=XqZsoesa55w">Baby Shark</a>
-          </li>
-          <li>
-            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Never Gonna Give You Up</a>
-          </li>
-        </ol>
+    </div>
+    <div class="right-bar" align="center">
+      <div id="weather-tmr">
+        <span id = "icon2"></span>
+        <img src="https://i.ibb.co/JtfNgVj/sun.png">
       </div>
-      <div id = "vacation">
-        <h2>How I Spent My Summer Vacation</h2>
-        <p>I read lots of books, taught coding camps, and got ready for college life.</p>
+    </div>
+    <div class="main" align="center">
+      <div id="standard-content">
+        <div id="temperature">
+          <h1>69°</h1>
+        </div>
+        <div id="welcome message">
+          <p>weather weather weather yay<br>please wear clothes thanks</p>
+        </div>
       </div>
+    </div>
     </div>
   </body>
   </html>
