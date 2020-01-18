@@ -22,8 +22,50 @@ function weatherCallback(weatherData) {
     var country = weatherData.sys.country;
     var description = weatherData.weather[0].main;
     var temperature = Math.floor(weatherData.main.temp - 273.15);
+    $("#temperature").html("<h1>" + temperature + "</h1>");
+    setMessage(temperature, description);
     showIcon(description);
   }
+
+function setMessage(temperature, description) {
+  $("#temperature").html("<h1>" + temperature + "</h1>");
+  var cold = false;
+  var mild = false;
+  var hot = false;
+  if (temperature <= 8) {
+    cold = true;
+  } else if (temperature <= 20) {
+    mild = true;
+  } else {
+    hot = true;
+  }
+
+  if (cold && description == "Rain") {
+    $("#welcome").html("It's cold and rainy today, wear a jacket and some boots.");
+  } else if (cold && description == "Clear") {
+    $("#welcome").html("It's cold but sunny today, wear a jacket at least :) ");
+  } else if (cold && description == "Clouds") {
+    $("#welcome").html("It's cold and gloomy today, wear a jacket.");
+  } else if (mild && description == "Rain") {
+    $("#welcome").html("It's mild and rainy today, wear a raincoat.");
+  } else if (mild && description == "Clear") {
+    $("#welcome").html("It's mild and sunny, Throw on a sweater!");
+  } else if (mild && description == "Clouds") {
+    $("#welcome").html("It's mild and cloudy, sweater weather!");
+  } else if (hot && description == "Rain") {
+    $("#welcome").html("It's warm but rainy today, wear a raincoat.");
+  } else if (hot && description == "Clear") {
+    $("#welcome").html("Hot and sunny! Throw on some shorts.");
+  } else if (hot && description == "Clouds") {
+    $("#welcome").html("It's warm but cloudy today, consider a longsleeve");
+  } else if (hot && description == "Rain") {
+    $("#welcome").html("It's warm, but it's raining. Wear a light coat");
+  } else {
+    $("#welcome").html("It's snowy! Bundle up!");
+  }
+
+
+}
 
 function showIcon(description) {
   if (description == "Clear") {
@@ -36,12 +78,3 @@ function showIcon(description) {
     $("#icon").html("<img src='https://i.ibb.co/FY0Jfwb/snowy.png'>");
   }
 }
-
-//LINKS:
-//SUNNY https://i.ibb.co/JtfNgVj/sun.png
-//CLOUDY https://i.ibb.co/h7J6sKT/cloudy.png
-// RAINY https://i.ibb.co/LSxhbjq/rainy.png
-// SNOWY https://i.ibb.co/FY0Jfwb/snowy.png
-// MOON https://i.ibb.co/ZBpjMNC/moon.png
-// PARTLY CLOUDY https://i.ibb.co/dLvP9DM/partly-cloudy.png
-// NIGHT TIME https://i.ibb.co/ZBpjMNC/moon.png
