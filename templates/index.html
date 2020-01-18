@@ -7,29 +7,30 @@
   <meta charset="utf-8">
   <title>Title</title>
   <link rel="stylesheet" href="../static/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body onload="getLocation()">
   <div id="body">
     <script src="../static/index.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
     <div class="left-bar" align="center">
+      <h2>Today's Weather</h2>
       <div id="weather-pic">
-        <span id = "icon"></span>
+        <span id = "icon"><img src="https://i.ibb.co/h7J6sKT/cloudy.png" alt=""></span>
       </div>
       <div id="weather-text">
         <ul>
           <li><p>weather</p></li>
           <li>some other weather</li>
-
         </ul>
       </div>
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
     </div>
-    <div class="right-bar" align="center">
-      <div id="weather-tmr">
-        <span id = "icon2"><img src="https://i.ibb.co/JtfNgVj/sun.png" alt=""></span>
-      </div>
-    </div>
-    <div class="main" align="center">
+
+    <div class="main">
       <div id="standard-content">
         <div id="temperature">
           <h1>69°</h1>

@@ -1,8 +1,8 @@
 html {
-  background-color: #cc99ff;
+  background-color: #0275d8;
   background-attachment: fixed;
   color: black;
-  font-family: fantasy;
+  font-family: optima;
   max-width: 800px;
   display:flex;
   margin: auto;
@@ -12,8 +12,8 @@ body {
   padding: 16px;
   flex-direction: column;
   flex 0 1 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 350px;
+  margin-right: 0;
   margin-top: 25px;
   margin-bottom: 25px;
   background-color: transparent;
@@ -22,8 +22,9 @@ body {
 
 .left-bar{
   height: 100%;
-  width: 250px;
+  width: 30%;
   position: fixed;
+  float: left;
   z-index: 1;
   top: 0;
   left: 0;
@@ -32,21 +33,11 @@ body {
   padding-top: 20px;
 }
 
-.right-bar{
-  height: 100%;
-  width: 250px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  background-color: purple;
-  overflow-x: hidden;
-  padding-top: 20px;
-}
 
 .main{
-
   padding: 0px 10px;
+  float: right;
+  width: 70%;
 }
 
 img {
@@ -54,11 +45,19 @@ img {
   width: 200px;
 }
 
-a{
-  color: gray;
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
 }
 
 p{
 font-family:Verdana;
 font-size: 12px;
+}
+
+h1{
+  font-size: 50px;
 }
